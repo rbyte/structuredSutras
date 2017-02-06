@@ -1,0 +1,40 @@
+
+
+@font-face {
+	font-family: "CormorantGaramond";
+	src: 
+	local("CormorantGaramond-Medium"),
+	url("assets/Cormorant-Medium.woff2") format('woff2'),
+	url("assets/CormorantGaramond-Medium.ttf") format('truetype')
+	;
+}
+@font-face {
+	font-family: "CormorantGaramond";
+	src: 
+	local("CormorantGaramond-MediumItalic"),
+	url("assets/Cormorant-MediumItalic.woff2") format('woff2'),
+	url("assets/CormorantGaramond-MediumItalic.ttf") format('truetype')
+	;
+	font-style: italic;
+}
+@font-face {
+	font-family: "CormorantGaramond";
+	src: 
+	local("CormorantGaramond-Bold"),
+	url("assets/Cormorant-Bold.woff2") format('woff2'),
+	url("assets/CormorantGaramond-Bold.ttf") format('truetype')
+	;
+	font-weight: bold;
+}
+
+
+html, body {
+	margin: 0;
+	padding: 0;
+}
+
+#sutras {
+	font-family: CormorantGaramond;
+	font-size: 1.5em;
+	margin: 3em;
+}
