@@ -33,8 +33,172 @@ html, body {
 	padding: 0;
 }
 
+ul {
+	list-style-image: url(assets/ul-dot.png);
+}
+
 #sutras {
 	font-family: CormorantGaramond;
 	font-size: 1.5em;
-	margin: 3em;
+	margin: 3em auto;
+	max-width: 45em;
+}
+
+
+#sutras .narrator {
+	font-style: italic;
+}
+#sutras .fourE,
+#sutras .fourEclosingP,
+#sutras ol.fourE > li
+{
+	color: #d10101;
+}
+#sutras ol.fourE > li {
+	font-weight: bold;
+}
+#sutras .fourEclosingP .fourE,
+#sutras .question .fourE,
+#sutras .question .factors,
+#sutras .question .breath
+{
+	font-weight: bold;
+}
+#sutras .question {
+	background-color: #fdceb6;
+	/* highlight text, not box! */
+	display: inline;
+	border: 3px solid #fdceb6;
+	border-radius: 8px;
+	padding: 0 5px;
+	line-height: 140%;
+}
+#sutras .highlightYellow {
+	background-color: #fff3a4;
+	border-radius: 5px;
+	padding: 0 4px;
+}
+#sutras .omission {
+	font-weight: bold;
+}
+#sutras .omission,
+#sutras .highlight
+{
+	background-color: #ececec;
+	border-radius: 5px;
+	padding: 0 4px;
+}
+#sutras strong {
+	border-radius: 5px;
+	background-color: #fdc060;
+}
+#sutras .breath {
+	color: #01a3f2;
+	/*color: #523b01;*/
+}
+#sutras .observe {
+	color: #67016f
+}
+#sutras .repeat {
+	color: #697602
+}
+#sutras .b {
+	font-weight: bold;
+}
+#sutras .i {
+	font-style: italic;
+}
+#sutras .keyword {
+	color: #006c66
+}
+#sutras .practise {
+	color: #885400
+}
+
+#sutras span.factors,
+/* colour bullets only */
+#sutras ol.factors > li
+{
+	color: #00a902;
+	/*color: #028b20;*/
+}
+#sutras ol.factors > li
+{
+	font-weight: bold;
+}
+/* undo for content */
+#sutras ol.factors div,
+#sutras ol.fourE div
+{
+	color: black;
+	font-weight: normal;
+}
+#sutras > section {
+	margin-bottom: 5em;
+}
+#sutras > section > section {
+	margin-bottom: 2em;
+}
+#sutras p {
+	margin: 0.8em 0;
+}
+#sutras li p {
+	margin-top: 0.5em;
+	margin-bottom: 0;
+}
+#sutras li p + ul,
+#sutras li p + ol,
+#sutras span + ol,
+#sutras span + ul
+{
+	margin-top: 0.3em;
+}
+#sutras ol,
+#sutras ul
+{
+	margin: 0.8em 0;
+}
+#sutras ol ul,
+#sutras ul ul
+{
+	margin: 0.3em 0;
+}
+#sutras h1,
+#sutras h2
+{
+	text-align: center;
+}
+#sutras li.indent {
+	padding-left: 2em;
+}
+#sutras .noBullets {
+	list-style: none;
+	padding-left: 2.5em;
+}
+#sutras ul div.bullet {
+	position: absolute;
+	margin-left: -1.3em;
+}
+#sutras .braceWithReturn {
+	padding-right: 4%;
+	background: no-repeat right/contain url(assets/braceWithReturn.svg);
+}
+
+
+
+/*
+horizontaly aligning in lists
+... not worth the complexity!
+*/
+#sutras table {
+	padding-left: 1.5em;
+}
+/* simulate list */
+#sutras table tr:before {
+	position: absolute;
+	color: transparent;
+	content: "-";
+	background: no-repeat center url(assets/ul-dot.png);
+	margin-left: -0.7em;
+	margin-top: 0.15em;
 }

@@ -1,0 +1,20 @@
+
+.narrator
+.question
+.fourE			4 Establishments of Mindfulness
+.fourEclosingP	Closing Paragraph of each of the 4 Establishments
+.breath			Full Awareness of Breathing
+.observe		"remains established in the observation of" ... "diligent, with clear understanding, mindful, having abandoned every craving and every distaste for this life."
+.keyword		coloured
+.factors		7 Factors of Awakening
+.practise		"developed and practiced continuously"
+.highlight
+.repeat
+
+q			inline quotation, phrased thought
+b,.b		
+strong		bold with highlight
+i			[semantic insertions], (comments)
+u			
+em		
+mark

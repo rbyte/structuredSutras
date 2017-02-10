@@ -12,6 +12,6 @@
 <body>
 	<!--<header>Structured Sutras</header>-->
 	
-	<?php include 'transcript.xml'; ?>
+	<?php include 'transcript.html'; ?>
 </body>
 </html>
