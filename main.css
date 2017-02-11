@@ -1,5 +1,4 @@
 
-
 @font-face {
 	font-family: "CormorantGaramond";
 	src: 
@@ -33,20 +32,39 @@ html, body {
 	padding: 0;
 }
 
-ul {
-	list-style-image: url(assets/ul-dot.png);
-}
 
 #sutras {
 	font-family: CormorantGaramond;
 	font-size: 1.5em;
-	margin: 3em auto;
-	max-width: 45em;
+	margin: 3% auto;
+	padding: 0 5%;
+	max-width: 46em;
 }
-
-
+#sutras h1 {
+	font-variant: small-caps;
+}
+#sutras h1,
+#sutras h2,
+#sutras h3
+{
+	text-align: center;
+}
+#sutras img {
+	width: 25%;
+	display: block;
+	/* oben, rechts, unten, links. */
+	margin: 0 auto 1.5em auto;
+}
+#sutras ul {
+	list-style-image: url(assets/ul-dot.png);
+}
 #sutras .narrator {
 	font-style: italic;
+}
+#sutras span.fourE,
+#sutras strong
+{
+	white-space: nowrap;
 }
 #sutras .fourE,
 #sutras .fourEclosingP,
@@ -64,6 +82,10 @@ ul {
 {
 	font-weight: bold;
 }
+#sutras .fourEbigNumber,
+#sutras h2.fourE::first-letter {
+	font-size: 150%;
+}
 #sutras .question {
 	background-color: #fdceb6;
 	/* highlight text, not box! */
@@ -80,11 +102,14 @@ ul {
 }
 #sutras .omission {
 	font-weight: bold;
+	background-color: #cbcbcb;
+}
+#sutras .highlight {
+	background-color: #ececec;
 }
 #sutras .omission,
 #sutras .highlight
 {
-	background-color: #ececec;
 	border-radius: 5px;
 	padding: 0 4px;
 }
@@ -134,7 +159,7 @@ ul {
 	font-weight: normal;
 }
 #sutras > section {
-	margin-bottom: 5em;
+	margin-bottom: 4em;
 }
 #sutras > section > section {
 	margin-bottom: 2em;
@@ -163,11 +188,6 @@ ul {
 {
 	margin: 0.3em 0;
 }
-#sutras h1,
-#sutras h2
-{
-	text-align: center;
-}
 #sutras li.indent {
 	padding-left: 2em;
 }
@@ -186,19 +206,9 @@ ul {
 
 
 
-/*
-horizontaly aligning in lists
-... not worth the complexity!
-*/
-#sutras table {
-	padding-left: 1.5em;
-}
-/* simulate list */
-#sutras table tr:before {
-	position: absolute;
-	color: transparent;
-	content: "-";
-	background: no-repeat center url(assets/ul-dot.png);
-	margin-left: -0.7em;
-	margin-top: 0.15em;
+
+@media print {
+	body {
+		-webkit-print-color-adjust: exact;
+	}
 }
