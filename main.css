@@ -32,16 +32,20 @@ html, body {
 	padding: 0;
 }
 
-
 #sutras {
-	font-family: CormorantGaramond;
-	font-size: 1.5em;
+	font-family: CormorantGaramond, Times, serif;
+	font-size: 1.6em;
 	margin: 3% auto;
 	padding: 0 5%;
-	max-width: 46em;
+	max-width: 42em;
+	min-width: 18em;
 }
 #sutras h1 {
 	font-variant: small-caps;
+	margin-bottom: 0.5em;
+}
+#sutras h3 {
+	margin-bottom: 2em;
 }
 #sutras h1,
 #sutras h2,
@@ -53,15 +57,20 @@ html, body {
 	width: 25%;
 	display: block;
 	/* oben, rechts, unten, links. */
-	margin: 0 auto 1.5em auto;
+	margin: 0 auto 0 auto;
 }
-#sutras ul {
-	list-style-image: url(assets/ul-dot.png);
+#sutras a,
+#sutras a:active
+{
+	color: #444
+/*	text-decoration: none;*/
 }
-#sutras .narrator {
-	font-style: italic;
+#sutras a:hover {
+	color: #666
+	/*text-decoration: underline;*/
 }
-#sutras span.fourE,
+#sutras section span.fourE,
+/*#sutras h1 .breath,*/
 #sutras strong
 {
 	white-space: nowrap;
@@ -82,30 +91,39 @@ html, body {
 {
 	font-weight: bold;
 }
-#sutras .fourEbigNumber,
-#sutras h2.fourE::first-letter {
+#sutras h1 .fourE,
+#sutras h1 .breath
+{
+	/*horizontal, vertical, blur, color */
+	text-shadow: 1px 1px 0px rgba(0, 0, 0, 1.0);
+}
+#sutras .fourEbig,
+#sutras h2.fourE::first-letter
+{
 	font-size: 150%;
+	line-height: 65%;
 }
 #sutras .question {
-	background-color: #fdceb6;
+	background-color: #f9e3d8;
+	/*background-color: #fdceb6;*/
 	/* highlight text, not box! */
 	display: inline;
-	border: 3px solid #fdceb6;
+	border: 3px solid #f8e0d4;
 	border-radius: 8px;
 	padding: 0 5px;
 	line-height: 140%;
 }
 #sutras .highlightYellow {
-	background-color: #fff3a4;
+	background-color: #fff8ca;
 	border-radius: 5px;
 	padding: 0 4px;
 }
 #sutras .omission {
 	font-weight: bold;
-	background-color: #cbcbcb;
+	background-color: #dbdbdb;
 }
 #sutras .highlight {
-	background-color: #ececec;
+	background-color: #f1f1f1;
 }
 #sutras .omission,
 #sutras .highlight
@@ -115,11 +133,24 @@ html, body {
 }
 #sutras strong {
 	border-radius: 5px;
-	background-color: #fdc060;
+	background-color: #ffea63;
+}
+#sutras .question,
+#sutras strong,
+#sutras .omission,
+#sutras .highlight,
+#sutras .highlightYellow
+{
+	text-shadow: 0px 0px 2px rgba(255, 255, 255, 0.5);
+}
+#sutras ul {
+	list-style-image: url(assets/ul-dot.png);
+}
+#sutras .narrator {
+	font-style: italic;
 }
 #sutras .breath {
 	color: #01a3f2;
-	/*color: #523b01;*/
 }
 #sutras .observe {
 	color: #67016f
@@ -139,16 +170,13 @@ html, body {
 #sutras .practise {
 	color: #885400
 }
-
 #sutras span.factors,
 /* colour bullets only */
 #sutras ol.factors > li
 {
 	color: #00a902;
-	/*color: #028b20;*/
 }
-#sutras ol.factors > li
-{
+#sutras ol.factors > li {
 	font-weight: bold;
 }
 /* undo for content */
