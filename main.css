@@ -31,17 +31,72 @@ html, body {
 	margin: 0;
 	padding: 0;
 }
-
-#sutras {
+body {
 	font-family: CormorantGaramond, Times, serif;
 	font-size: 1.6em;
+}
+
+header {
+	position: relative;
+	background-color: #d1e9ff;
+	box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+}
+header #aboutSummary {
+	text-align: center;
+	padding: 0.3em 2%;
+}
+header #showMore {
+	position: relative;
+	display: inline-block;
+	font-size: 0.8em;
+	background-color: white;
+	border-radius: 10px;
+	padding: 4px 8px;
+	margin: 4px 10px;
+	box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.3);
+	cursor: pointer;
+}
+header #showMore:after {
+	bottom: 50%;
+	right: 100%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	border-right-color: white;
+	border-width: 5px;
+	margin-bottom: -5px;
+}
+header #aboutFull {
+	/*display: none;*/
+	margin: 0 auto;
+	padding: 0.8em 5%;
+	max-width: 42em;
+	min-width: 18em;
+}
+
+
+
+
+#sutras {
 	margin: 3% auto;
 	padding: 0 5%;
 	max-width: 42em;
 	min-width: 18em;
 }
+#sutras article {
+	margin-bottom: 10em;
+}
+#sutras article > section {
+	margin-bottom: 4em;
+}
+#sutras article > section > section {
+	margin-bottom: 2em;
+}
 #sutras h1 {
 	font-variant: small-caps;
+	font-size: 2.3em;
 	margin-bottom: 0.5em;
 }
 #sutras h3 {
@@ -185,12 +240,6 @@ html, body {
 {
 	color: black;
 	font-weight: normal;
-}
-#sutras > section {
-	margin-bottom: 4em;
-}
-#sutras > section > section {
-	margin-bottom: 2em;
 }
 #sutras p {
 	margin: 0.8em 0;

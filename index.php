@@ -10,8 +10,6 @@
 </head>
 
 <body>
-	<!--<header>Structured Sutras</header>-->
-	
 	<?php include 'transcript.html'; ?>
 </body>
 </html>
