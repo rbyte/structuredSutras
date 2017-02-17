@@ -38,44 +38,74 @@ body {
 
 header {
 	position: relative;
-	background-color: #d1e9ff;
-	box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+	background-color: #fcfcfc;
+	box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+	background-image: url(assets/cardboard_flat_030_200x200.png);
 }
-header #aboutSummary {
+#aboutSummary {
 	text-align: center;
 	padding: 0.3em 2%;
+	cursor: pointer;
 }
-header #showMore {
+#showMore {
 	position: relative;
 	display: inline-block;
 	font-size: 0.8em;
-	background-color: white;
+	background-color: #fcfcfc;
 	border-radius: 10px;
 	padding: 4px 8px;
 	margin: 4px 10px;
-	box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.3);
-	cursor: pointer;
+	box-shadow: inset 0 0 4px 0 rgba(0, 0, 0, 0.2);
+	/*horizontal, vertical, blur, color */
+	text-shadow: 1px 1px 0px rgba(255, 255, 255, 1.0);
+	border: 1px solid #777;
+	transition: all 50ms ease-in-out;
 }
-header #showMore:after {
-	bottom: 50%;
+#aboutSummary:hover #showMore:not(.on) {
+	box-shadow: inset 0 1px 6px 0 rgba(0, 0, 0, 0.3);
+}
+#showMore.on {
+	background-color: #eee !important;
+	box-shadow: inset 1px 1px 4px 0 rgba(0, 0, 0, 0.6);
+}
+#showMore:after, #showMore:before {
+	position: absolute;
 	right: 100%;
+	bottom: 50%;
 	border: solid transparent;
 	content: " ";
 	height: 0;
 	width: 0;
-	position: absolute;
-	border-right-color: white;
+	transition: all 50ms ease-in-out;
+}
+#showMore:after {
+	border-right-color: #ccc;
 	border-width: 5px;
 	margin-bottom: -5px;
 }
-header #aboutFull {
-	/*display: none;*/
+#showMore.on:after {
+	border-right-color: #999;
+}
+#showMore:before {
+	border-right-color: #444;
+	border-width: 6px;
+	margin-bottom: -6px;
+}
+
+header .blockquote {
+	margin: 1em;
+}
+#aboutFull {
+	max-height: 0px;
+	transition: all 1000ms ease-in-out;
+	overflow: hidden;
+}
+#aboutFull > div {
 	margin: 0 auto;
 	padding: 0.8em 5%;
 	max-width: 42em;
 	min-width: 18em;
 }
-
 
 
 
@@ -85,207 +115,232 @@ header #aboutFull {
 	max-width: 42em;
 	min-width: 18em;
 }
-#sutras article {
+article {
 	margin-bottom: 10em;
 }
-#sutras article > section {
+article > section {
 	margin-bottom: 4em;
 }
-#sutras article > section > section {
+article > section > section {
 	margin-bottom: 2em;
 }
-#sutras h1 {
+h1 {
 	font-variant: small-caps;
 	font-size: 2.3em;
 	margin-bottom: 0.5em;
 }
-#sutras h3 {
+h3 {
 	margin-bottom: 2em;
 }
-#sutras h1,
-#sutras h2,
-#sutras h3
+h1,
+h2,
+h3
 {
 	text-align: center;
 }
-#sutras img {
+img {
 	width: 25%;
 	display: block;
 	/* oben, rechts, unten, links. */
 	margin: 0 auto 0 auto;
 }
-#sutras a,
-#sutras a:active
+a,
+a:active
 {
 	color: #444
 /*	text-decoration: none;*/
 }
-#sutras a:hover {
+a:hover {
 	color: #666
 	/*text-decoration: underline;*/
 }
-#sutras section span.fourE,
-/*#sutras h1 .breath,*/
-#sutras strong
+section span.fourE,
+/*h1 .breath,*/
+strong
 {
 	white-space: nowrap;
 }
-#sutras .fourE,
-#sutras .fourEclosingP,
-#sutras ol.fourE > li
+.fourE,
+.fourEclosingP,
+ol.fourE > li
 {
 	color: #d10101;
 }
-#sutras ol.fourE > li {
+ol.fourE > li {
 	font-weight: bold;
 }
-#sutras .fourEclosingP .fourE,
-#sutras .question .fourE,
-#sutras .question .factors,
-#sutras .question .breath
+.fourEclosingP .fourE,
+.question .fourE,
+.question .factors,
+.question .breath
 {
 	font-weight: bold;
 }
-#sutras h1 .fourE,
-#sutras h1 .breath
+h1 .fourE,
+h1 .breath
 {
 	/*horizontal, vertical, blur, color */
 	text-shadow: 1px 1px 0px rgba(0, 0, 0, 1.0);
 }
-#sutras .fourEbig,
-#sutras h2.fourE::first-letter
+.fourEbig,
+h2.fourE::first-letter
 {
 	font-size: 150%;
 	line-height: 65%;
 }
-#sutras .question {
+.question {
 	background-color: #f9e3d8;
 	/*background-color: #fdceb6;*/
 	/* highlight text, not box! */
 	display: inline;
-	border: 3px solid #f8e0d4;
+	border: 3px solid #f9e3d8;
 	border-radius: 8px;
 	padding: 0 5px;
 	line-height: 140%;
 }
-#sutras .highlightYellow {
+.highlightYellow {
 	background-color: #fff8ca;
 	border-radius: 5px;
 	padding: 0 4px;
 }
-#sutras .omission {
-	font-weight: bold;
+.omission {
 	background-color: #dbdbdb;
 }
-#sutras .highlight {
+.omission,
+header .highlight
+{
+	background-color: #dbdbdb;
+}
+.highlight {
 	background-color: #f1f1f1;
 }
-#sutras .omission,
-#sutras .highlight
+.omission,
+.highlight
 {
 	border-radius: 5px;
 	padding: 0 4px;
 }
-#sutras strong {
+strong {
 	border-radius: 5px;
 	background-color: #ffea63;
 }
-#sutras .question,
-#sutras strong,
-#sutras .omission,
-#sutras .highlight,
-#sutras .highlightYellow
+.question,
+strong,
+.omission,
+.highlight,
+.highlightYellow
 {
 	text-shadow: 0px 0px 2px rgba(255, 255, 255, 0.5);
 }
-#sutras ul {
+ul {
 	list-style-image: url(assets/ul-dot.png);
 }
-#sutras .narrator {
+.narrator {
 	font-style: italic;
 }
-#sutras .breath {
+.breath {
 	color: #01a3f2;
 }
-#sutras .observe {
+.observe {
 	color: #67016f
 }
-#sutras .repeat {
+.repeat {
 	color: #697602
 }
-#sutras .b {
+.b {
 	font-weight: bold;
 }
-#sutras .i {
+.i {
 	font-style: italic;
 }
-#sutras .keyword {
+.keyword {
 	color: #006c66
 }
-#sutras .practise {
+.practise {
 	color: #885400
 }
-#sutras span.factors,
+span.factors,
 /* colour bullets only */
-#sutras ol.factors > li
+ol.factors > li
 {
 	color: #00a902;
 }
-#sutras ol.factors > li {
+ol.factors > li {
 	font-weight: bold;
 }
 /* undo for content */
-#sutras ol.factors div,
-#sutras ol.fourE div
+ol.factors div,
+ol.fourE div
 {
 	color: black;
 	font-weight: normal;
 }
-#sutras p {
+p {
 	margin: 0.8em 0;
 }
-#sutras li p {
+li p {
 	margin-top: 0.5em;
 	margin-bottom: 0;
 }
-#sutras li p + ul,
-#sutras li p + ol,
-#sutras span + ol,
-#sutras span + ul
+li p + ul,
+li p + ol,
+span + ol,
+span + ul
 {
 	margin-top: 0.3em;
 }
-#sutras ol,
-#sutras ul
+ol,
+ul
 {
 	margin: 0.8em 0;
 }
-#sutras ol ul,
-#sutras ul ul
+ol ul,
+ul ul
 {
 	margin: 0.3em 0;
 }
-#sutras li.indent {
+li.indent {
 	padding-left: 2em;
 }
-#sutras .noBullets {
+.noBullets {
 	list-style: none;
 	padding-left: 2.5em;
 }
-#sutras ul div.bullet {
+ul div.bullet {
 	position: absolute;
 	margin-left: -1.3em;
 }
-#sutras .braceWithReturn {
+.braceWithReturn {
 	padding-right: 4%;
 	background: no-repeat right/contain url(assets/braceWithReturn.svg);
 }
-
+.articleEnd {
+	width: 40%;
+}
 
 
 
 @media print {
 	body {
 		-webkit-print-color-adjust: exact;
+		font-size: 1.2em;
 	}
+	header {
+		display: none;
+	}
+	article
+	,article > section
+	,.page-break-after
+	{
+		page-break-after: always;
+	}
+	
+	li p {
+		margin-top: 0.1em;
+	}
+	
+	p, article > section > section {
+		/*page-break-inside: avoid*/
+	}
+	
 }
