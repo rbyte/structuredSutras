@@ -39,7 +39,7 @@ body {
 header {
 	position: relative;
 	background-color: #fcfcfc;
-	box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+	box-shadow: 0 0 0.4em 0 rgba(0, 0, 0, 0.4);
 	background-image: url(assets/cardboard_flat_030_200x200.png);
 }
 #aboutSummary {
@@ -96,24 +96,27 @@ header .blockquote {
 	margin: 1em;
 }
 #aboutFull {
-	max-height: 0px;
+	max-height: 0;
 	transition: all 1000ms ease-in-out;
 	overflow: hidden;
 }
 #aboutFull > div {
 	margin: 0 auto;
 	padding: 0.8em 5%;
-	max-width: 42em;
-	min-width: 18em;
 }
 
 
 
+
+#sutras,
+#aboutFull > div {
+	max-width: 41em;
+	min-width: 18em;
+}
 #sutras {
 	margin: 3% auto;
 	padding: 0 5%;
-	max-width: 42em;
-	min-width: 18em;
+
 }
 article {
 	margin-bottom: 10em;
@@ -180,7 +183,7 @@ h1 .fourE,
 h1 .breath
 {
 	/*horizontal, vertical, blur, color */
-	text-shadow: 1px 1px 0px rgba(0, 0, 0, 1.0);
+	text-shadow: 0.01em 0.01em 0 rgba(0, 0, 0, 1.0);
 }
 .fourEbig,
 h2.fourE::first-letter
@@ -189,21 +192,21 @@ h2.fourE::first-letter
 	line-height: 65%;
 }
 .question {
-	background-color: #f9e3d8;
-	/*background-color: #fdceb6;*/
+	background-color: #feecea;
 	/* highlight text, not box! */
 	display: inline;
-	border: 3px solid #f9e3d8;
-	border-radius: 8px;
-	padding: 0 5px;
+	border: 0.12em solid #feecea;
+	border-radius: 0.32em;
+	padding: 0 0.2em;
 	line-height: 140%;
 }
 .highlightYellow {
 	background-color: #fff8ca;
-	border-radius: 5px;
-	padding: 0 4px;
+	border-radius: 0.2em;
+	padding: 0 0.16em;
 }
 .omission {
+	color: black;
 	background-color: #dbdbdb;
 }
 .omission,
@@ -217,11 +220,11 @@ header .highlight
 .omission,
 .highlight
 {
-	border-radius: 5px;
-	padding: 0 4px;
+	border-radius: 0.2em;
+	padding: 0 0.16em;
 }
 strong {
-	border-radius: 5px;
+	border-radius: 0.2em;
 	background-color: #ffea63;
 }
 .question,
@@ -230,7 +233,7 @@ strong,
 .highlight,
 .highlightYellow
 {
-	text-shadow: 0px 0px 2px rgba(255, 255, 255, 0.5);
+	text-shadow: 0 0 0.2em rgba(255, 255, 255, 0.5);
 }
 ul {
 	list-style-image: url(assets/ul-dot.png);
@@ -317,6 +320,16 @@ ul div.bullet {
 .articleEnd {
 	width: 40%;
 }
+.mindUl li {
+	min-width: 16em;
+	float: left;
+	white-space: nowrap;
+}
+.smaller {
+	font-size: 0.85em;
+}
+
+
 
 
 
@@ -333,10 +346,6 @@ ul div.bullet {
 	,.page-break-after
 	{
 		page-break-after: always;
-	}
-	
-	li p {
-		margin-top: 0.1em;
 	}
 	
 	p, article > section > section {

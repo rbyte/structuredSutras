@@ -13,7 +13,7 @@ var aboutFull = document.getElementById("aboutFull")
 console.assert(aboutSummary && showMore && aboutFull)
 
 aboutSummary.onclick = function() {
-	aboutFull.style.maxHeight = showMoreOn ? "0px" : "3000px"
+	aboutFull.style.maxHeight = showMoreOn ? "0" : "100em"
 	if (showMoreOn) {
 		showMore.classList.remove("on")
 	} else {
